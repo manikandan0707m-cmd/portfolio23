@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D. Manikandan — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio of D. Manikandan — aspiring IT professional, movie editor and web developer.">
+  <style>
+    :root{
+      --bg:#0f1724; /* dark background */
+      --card:#0b1220;
+      --muted:#9aa6b2;
+      --accent:#06b6d4; /* teal */
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --max-width:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,var(--bg),#071023);}
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+
+    /* header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#041025}
+    nav{display:flex;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;font-weight:500;padding:8px;border-radius:10px}
+    nav a:hover{color:#fff;background:rgba(255,255,255,0.02)}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:center;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:18px}
+    .hero h1{font-size:clamp(28px,4vw,40px);margin:0}
+    .tag{color:var(--accent);font-weight:600;margin-top:8px}
+    .hero p{color:var(--muted);margin-top:12px;max-width:60ch}
+    .cta{display:inline-block;margin-top:18px;padding:12px 18px;border-radius:12px;background:var(--accent);color:#041025;font-weight:700;text-decoration:none}
+
+    .profile-card{background:var(--card);padding:18px;border-radius:14px;display:flex;flex-direction:column;align-items:center;gap:10px}
+    .profile-pic{width:200px;height:200px;border-radius:16px;overflow:hidden;border:3px solid rgba(255,255,255,0.05)}
+    .profile-pic img{width:100%;height:100%;object-fit:cover;}
+    .email{font-size:14px;color:var(--muted);word-break:break-all}
+
+    /* sections */
+    section{margin-top:28px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:14px}
+    .muted{color:var(--muted)}
+
+    /* skills */
+    .skill{margin-bottom:12px}
+    .skill .label{display:flex;justify-content:space-between;margin-bottom:6px}
+    .bar{height:10px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
+    .progress{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#3b82f6);border-radius:999px;transition:width 900ms cubic-bezier(.2,.9,.3,1)}
+
+    /* services */
+    .services{display:flex;flex-direction:column;gap:12px}
+    .service{display:flex;gap:12px;align-items:flex-start}
+    .svc-icon{width:46px;height:46px;border-radius:10px;background:rgba(255,255,255,0.02);display:grid;place-items:center}
+
+    /* portfolio */
+    .portfolio-placeholder{display:flex;align-items:center;justify-content:center;height:160px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);color:var(--muted);font-weight:600}
+
+    /* contact form */
+    form{display:grid;gap:12px}
+    input,textarea{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:10px;color:#eaf6ff}
+    input::placeholder,textarea::placeholder{color:var(--muted)}
+    .btn{background:var(--accent);color:#041025;padding:10px 12px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
+
+    footer{margin-top:28px;color:var(--muted);text-align:center;padding:14px}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid-2{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">DM</div>
+        <div>
+          <div style="font-weight:700">D. Manikandan</div>
+          <div style="font-size:12px;color:var(--muted)">BCA II A — Agurchand Manmull Jain College</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div>
+          <h1>D. Manikandan</h1>
+          <div class="tag">Aspiring IT Professional | Movie Editor | Web Developer</div>
+          <p>I am currently studying BCA II A at Agurchand Manmull Jain College. My passion is to build a career in the IT field, with a strong interest in software development and creative digital work.</p>
+          <a class="cta" href="#contact">Contact Me</a>
+        </div>
+        <aside class="profile-card">
+          <div class="profile-pic">
+            <img src="my pic.jpg" alt="D. Manikandan">
+          </div>
+          <div style="text-align:center">
+            <div style="font-weight:700">D. Manikandan</div>
+            <div class="email">manikandan735869@gmail.com</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="card" style="margin-top:18px">
+        <h2>About</h2>
+        <p class="muted">I am currently studying BCA II A at Agurchand Manmull Jain College. My passion is to build a career in the IT field, with a strong interest in software development and creative digital work.</p>
+        <div style="margin-top:12px">
+          <strong>Education</strong>
+          <div class="muted">Bachelor of Computer Applications (BCA), Agurchand Manmull Jain College — currently pursuing</div>
+        </div>
+      </section>
+
+      <section id="skills" class="grid-2">
+        <div class="card">
+          <h3>Technical Skills</h3>
+          <div style="margin-top:8px">
+            <div class="skill">
+              <div class="label"><span>Java</span><span class="muted">80%</span></div>
+              <div class="bar"><div class="progress" data-value="80"></div></div>
+            </div>
+            <div class="skill">
+              <div class="label"><span>C++</span><span class="muted">72%</span></div>
+              <div class="bar"><div class="progress" data-value="72"></div></div>
+            </div>
+            <div class="skill">
+              <div class="label"><span>Python</span><span class="muted">78%</span></div>
+              <div class="bar"><div class="progress" data-value="78"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Other Expertise</h3>
+          <div class="services" style="margin-top:8px">
+            <div class="service">
+              <div class="svc-icon">🎬</div>
+              <div>
+                <strong>Movie Editing</strong>
+                <div class="muted">Video editing, post-production, and creative cuts.</div>
+              </div>
+            </div>
+            <div class="service">
+              <div class="svc-icon">🖥️</div>
+              <div>
+                <strong>Web Development</strong>
+                <div class="muted">Designing and developing professional websites.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="card">
+        <h3>Portfolio</h3>
+        <div style="margin-top:12px" class="portfolio-placeholder">Projects coming soon — Stay tuned!</div>
+      </section>
+
+      <section id="contact" class="card">
+        <h3>Contact</h3>
+        <p class="muted">Send me a message — I'll get back to you as soon as possible.</p>
+        <form id="contactForm" novalidate>
+          <input type="text" id="name" placeholder="Your name" required>
+          <input type="email" id="email" placeholder="Your email" required>
+          <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+          <div style="display:flex;gap:10px;align-items:center">
+            <button type="submit" class="btn">Send message</button>
+            <div class="muted" style="font-size:13px">Or email me directly: <a href="mailto:manikandan735869@gmail.com" style="color:var(--accent);text-decoration:none">manikandan735869@gmail.com</a></div>
+          </div>
+          <div id="formMsg" class="muted" style="margin-top:8px"></div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> D. Manikandan — Aspiring IT Professional
+    </footer>
+  </div>
+
+  <script>
+    // populate year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // animate skill bars when visible
+    function animateSkills(){
+      document.querySelectorAll('.progress').forEach(el=>{
+        const v = el.getAttribute('data-value');
+        el.style.width = v+"%";
+      })
+    }
+    // simple intersection observer
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ animateSkills(); obs.disconnect(); } });
+    },{threshold:0.3});
+    obs.observe(document.getElementById('skills'));
+
+    // smooth scroll for anchored links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    });
+
+    // contact form - client side only
+    const form = document.getElementById('contactForm');
+    const msgEl = document.getElementById('formMsg');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){ msgEl.textContent = 'Please fill out all fields.'; return; }
+      // basic email pattern check
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if(!re.test(email)){ msgEl.textContent = 'Please enter a valid email.'; return; }
+      // this demo does not send email — show success and clear form
+      msgEl.style.color = 'lightgreen';
+      msgEl.textContent = 'Thanks! This is a demo — to enable real messages please connect a backend or use a form service.';
+      form.reset();
+      setTimeout(()=>{ msgEl.textContent = ''; msgEl.style.color = ''; },6000);
+    });
+  </script>
+</body>
+</html>
